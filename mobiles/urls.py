@@ -7,5 +7,6 @@ urlpatterns = [
 	# url(r'^product/$', 'object_list',{'queryset': Product.objects.all()}),
 	# url(r'^product/(?P<slug>[-\w]+/$', 'object_detail', {'queryset': Product.objects.all()})
 	url(r'^$', views.index),
-	url(r'^product/$', views.products),
+	url(r'^product/$', views.product_list),
+	url(r'^product/(?P<product_id>[0-9]+)/$', views.product_detail)
 ]

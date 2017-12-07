@@ -1,6 +1,6 @@
 <h1>Mobiles Product Catalog</h1>
 
 {% for product_list in product_lists %}
-<h3><a href="{{ product_list.get_absolute_url }}">{{ product_list.name }}</a></h3>
+<h3><a href="{{ product_list.get_absolute_url }}/mobiles/product/{{product_list.id}}">{{ product_list.name }}</a></h3>
 <p>{{ product_list.description }}</p>
 {% endfor %}

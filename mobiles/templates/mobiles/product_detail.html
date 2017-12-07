@@ -1,5 +1,21 @@
-<h1>{{ object.name}}</h1>
-<p>{{object.description}}</p>
-<p>Price: ${{ object.price_in_dollars }}</p>
+<h1>{{ product_detail.name}}</h1>
+<p>{{product_detail.description}}</p>
+<p>Price: ${{ product_detail.price_in_dollars }}</p>
 <hr>
-<p><a href="{% url product_list %}">Back to product list</a></p>
+{# <p><a href="{% url product_list %}">Back to product list</a></p> #}
+
+<form    action="https://sandbox.google.com/checkout/api/checkout/
+   v2/checkoutForm/Merchant/xxxxx" id="BB_BuyButtonForm" method="post"
+   name="BB_BuyButtonForm">
+      <input name="item_name_1"
+            type="hidden" value="Cranberry Preserves"/>
+      <input name="item_description_1"
+            type="hidden" value="Tasty jam made from cranberries."/>
+      <input name="item_quantity_1" type="hidden" value="1"/>
+      <input name="item_price_1" type="hidden" value="0.5"/>
+      <input name="item_currency_1" type="hidden" value="USD"/>
+      <input name="_charset_" type="hidden" value="utf-8"/>
+      <input alt="" src="https://sandbox.google.com/checkout/buttons/
+   buy.gif?merchant_id=xxxxx&amp;w=117&amp;h=48&amp;style=white&amp;varia
+   nt=text&amp;loc=en_US" type="image"/>
+   </form>
