@@ -19,4 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^mobiles/',include('mobiles.urls')),
+    url(r'hmac/', include('registration.backends.hmac.urls')),
 ]
